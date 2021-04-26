@@ -16,12 +16,7 @@ read input2
 
 if [[ "$input2" == 1 ]]; then
 clear
-filename='capsules.txt'
-n=1
-while read line; do
-echo "$n. serial $line"
-n=$((n+1))
-done < $filename
+awk 'NR==FNR{_[NR]=$0}NR!=FNR{print "Kapszula típusa: "  _[FNR] "\n" "Széria szám: "  $0" \n-----------------------------"}' type.txt capsules.txt
 
 
 else
