@@ -15,8 +15,9 @@ read input2
 
 
 if [[ "$input2" == 1 ]]; then
-clear
-awk 'NR==FNR{_[NR]=$0}NR!=FNR{print "Kapszula típusa: "  _[FNR] "\n" "Széria szám: "  $0" \n-----------------------------"}' type.txt capsules.txt
+paste type.txt serial.txt reuse.txt status.txt update.txt >> test.txt
+echo "Típus	széria szám	használatok száma	státusz		utolsó fejlemény"
+cat test.txt
 
 
 else
