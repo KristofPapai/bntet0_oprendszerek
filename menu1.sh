@@ -24,7 +24,7 @@ paste type.txt serial.txt reuse.txt status.txt update.txt > kapsz.txt
 echo "Típus	széria szám	használatok száma	státusz		utolsó fejlemény"
 cat kapsz.txt
 
-elif [[ "input2" == 2 ]]; then
+elif [[ "$input2" == 2 ]]; then
 paste serialB.txt block.txt reuseB.txt statusB.txt updateB.txt > falc.txt
 echo "Falcon sorozatszám     Block     használatok száma       státusz         utolsó fejlemény"
 cat falc.txt
