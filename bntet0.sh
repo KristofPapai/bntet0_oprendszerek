@@ -15,6 +15,7 @@ echo "1.es menü lett kiválasztva"
 bash menu1.sh
 elif [[ "$input1" == 2 ]]; then
 echo "2.es menü lett kiválasztva"
+bash menu2.sh
 elif [[ "$input1" == 3 ]]; then
 echo "3.as menü lett kiválasztva"
 else
