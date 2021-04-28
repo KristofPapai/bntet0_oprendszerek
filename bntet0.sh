@@ -26,6 +26,7 @@ echo "3-as menü lett kiválasztva"
 bash menu3.sh
 elif [[ "$input1" == 4 ]]; then
 echo "4-es menü lett kiválasztva"
+bash menu4.sh
 elif [[ "$input1" == 0 ]]; then
 clear
 else
