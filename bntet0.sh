@@ -5,7 +5,7 @@ echo "Készitette: Pápai Kristóf Levente - BNTET0"
 echo "------------------------------------------"
 echo "Menü:"
 echo "1. SpaceX űrhajók"
-echo "2. SpaceX Kilövések"
+echo "2. SpaceX történelmi események"
 echo "3. SpaceX legényég"
 echo "Kérem írja be a menüpont számát amelyiket ki szeretné listázni."
 read input1
