@@ -11,7 +11,7 @@ curl "https://api.spacexdata.com/v4/cores" |jq -r .[].reuse_count  > reuseB.txt
 curl "https://api.spacexdata.com/v4/cores" |jq -r .[].status  > statusB.txt
 curl "https://api.spacexdata.com/v4/cores" |jq -r .[].last_update  > updateB.txt
 
-
+clear
 echo "Menü:"
 echo "-----------------------------------"
 echo "1. SpaceX kapszulák"
@@ -20,30 +20,31 @@ read input2
 
 
 if [[ "$input2" == 1 ]]; then
+clear
 paste type.txt serial.txt reuse.txt status.txt update.txt > kapsz.txt
-echo "--------------------------------------------------------------------"
-echo "Típus///széria szám///használatok száma///státusz///utolsó fejlemény"
-echo "--------------------------------------------------------------------"
-cat kapsz.txt
-
+sed -i '1i\----------	----------	----------	----------	----------' kapsz.txt
+sed -i '1i\Típus	Széria szám	használatok száma	státusz		utolsó fejlemény' kapsz.txt
+cat kapsz.txt | column -t -s$'\t'
+rm kapsz.txt
 elif [[ "$input2" == 2 ]]; then
+clear
 paste serialB.txt block.txt reuseB.txt statusB.txt updateB.txt > falc.txt
-echo "---------------------------------------------------------------------------"
-echo "Falcon sorozatszám///Block///használatok száma///státusz///utolsó fejlemény"
-echo "---------------------------------------------------------------------------"
-cat falc.txt
+sed -i '1i\----------		----------		----------	----------	----------' falc.txt
+sed -i '1i\Falcon sorozatzám	Block	használatok száma	státusz		utolsó fejlemény' falc.txt
+cat falc.txt | column -t -s$'\t'
+rm falc.txt
 
 else
 echo "valami más"
 fi
 
-rm kapsz.txt
+
 rm type.txt
 rm serial.txt
 rm reuse.txt
 rm status.txt
 rm update.txt
-rm falc.txt
+
 rm serialB.txt
 rm block.txt
 rm reuseB.txt
