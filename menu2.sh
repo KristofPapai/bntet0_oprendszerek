@@ -11,6 +11,8 @@ sed -i '1i\----------		----------' history.txt
 sed -i '1i\Esemény	Esemény időpontja' history.txt
 
 cat history.txt | column -t -s$'\t'
+read input2
+bash bntet0.sh
 
 rm title.txt
 rm date.txt
