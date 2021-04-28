@@ -26,6 +26,8 @@ sed -i '1i\----------	----------	----------	----------	----------' kapsz.txt
 sed -i '1i\Típus	Széria szám	használatok száma	státusz		utolsó fejlemény' kapsz.txt
 cat kapsz.txt | column -t -s$'\t'
 rm kapsz.txt
+read input3
+bash bntet0.sh
 elif [[ "$input2" == 2 ]]; then
 clear
 paste serialB.txt block.txt reuseB.txt statusB.txt updateB.txt > falc.txt
@@ -33,9 +35,11 @@ sed -i '1i\----------		----------		----------	----------	----------' falc.txt
 sed -i '1i\Falcon sorozatzám	Block	használatok száma	státusz		utolsó fejlemény' falc.txt
 cat falc.txt | column -t -s$'\t'
 rm falc.txt
-
+read input3
+bash bntet0.sh
 else
 echo "valami más"
+bash bntet0.sh
 fi
 
 
