@@ -17,8 +17,6 @@ sed -i '1i\Rakéta neve	Cég	Ország	Költség kilövésenként(USD)	Stages	Els�
 
 cat rockets.txt | column -t -s$'\t'
 
-read input1
-bash bntet0.sh
 
 rm name.txt
 rm company.txt

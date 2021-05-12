@@ -13,8 +13,6 @@ sed -i '1i\Asztronauta neve	Ügynökége	Státusza' astronaut.txt
 
 cat astronaut.txt | column -t -s$'\t'
 
-read input1
-bash bntet0.sh
 
 rm name.txt
 rm agency.txt
